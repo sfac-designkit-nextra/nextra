@@ -1,0 +1,148 @@
+# Button
+---
+Button은 사용자가 클릭 또는 탭하여 특정 동작을 수행할 수 있는 인터페이스 요소입니다. <br />
+일반적으로 텍스트로 표시되며 원하는 동작을 수행합니다. <br />
+각 버튼에는 `primary`, `destructive`, `secondary`, `outline`, `link`, `ghost` 등 여섯 가지 Variant와<br/>
+두가지의 `disabled`, `asChild` 속성이 있습니다.
+<br />
+<br />
+### Primary
+<br />
+import Image from 'next/image'
+
+<Image src="/Primary.png" alt="Primary" width={423} height={50}  />
+```tsx /variant/ /text/ copy
+
+  <Button 
+    variant="primary" 
+    text="로그인" 
+    /* 원하는 코드 추가 가능 */
+  />
+
+```
+<br />
+<br />
+### Destructive
+<br />
+<Image src="/Destructive.png" alt="Destructive" width={423} height={50}  />
+```tsx /variant/ /text/ copy
+
+  <Button 
+    variant="destructive" 
+    text="로그인" 
+    /* 원하는 코드 추가 가능 */
+  />
+
+```
+
+<br />
+<br />
+### Secondary
+<br />
+
+<Image src="/Secondary.png" alt="Secondary" width={423} height={50}  />
+```tsx /variant/ /text/ copy
+
+  <Button 
+    variant="secondary" 
+    text="로그인" 
+    /* 원하는 코드 추가 가능 */
+  />
+
+```
+
+<br />
+<br />
+### Outline
+<br />
+
+<Image src="/Outline.png" alt="Outline" width={423} height={50}  />
+```tsx /variant/ /text/ copy
+
+  <Button 
+    variant="outline" 
+    text="로그인" 
+    /* 원하는 코드 추가 가능 */
+  />
+
+```
+
+<br />
+<br />
+### Link
+<br />
+<div>
+  <span>default</span>
+  <Image src="/Link.png" alt="Ghost" width={423} height={50}  />
+  <br />
+  <span>hover</span>
+  <Image src="/Link_hover.png" alt="Ghost" width={423} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+
+  <Button 
+    variant="link" 
+    text="로그인" 
+    /* 원하는 코드 추가 가능 */
+  />
+
+```
+
+
+<br />
+<br />
+### Ghost
+<br />
+
+<div>
+  <span>default</span>
+  <Image src="/Ghost.png" alt="Ghost" width={423} height={50}  />
+  <br />
+  <span>hover</span>
+  <Image src="/Ghost_hover.png" alt="Ghost" width={423} height={50}  />
+</div>
+
+```tsx /variant/ /text/ copy
+
+  <Button 
+    variant="ghost" 
+    text="로그인" 
+    /* 원하는 코드 추가 가능 */
+  />
+
+```
+
+<br />
+<br />
+### Disabled
+<br />
+
+<Image src="/Disabled.png" alt="disabled" width={423} height={50} />
+```tsx {5} copy
+
+  <Button 
+    variant="ghost" 
+    text="로그인" 
+    disabled
+    /* 원하는 코드 추가 가능 */
+  />
+
+```
+
+<br />
+<br />
+### asChild
+<br />
+
+<Image src="/AsChild.png" alt="AsChild" width={116} height={37} />
+```tsx {5} copy
+
+  <Button 
+    variant="secondary" 
+    text="로그인" 
+    asChild
+    /* 원하는 코드 추가 가능 */
+  />
+
+```
+

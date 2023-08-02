@@ -1,0 +1,10 @@
+.iconList {
+  display: flex;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.iconListLi{
+  margin-right: 20px;
+  padding-top: 10px;
+}
