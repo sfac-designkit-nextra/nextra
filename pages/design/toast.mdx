@@ -1,0 +1,89 @@
+# Toast
+
+토스트(Toast)는 사용자에게 간단한 메시지나 알림을 표시하는 UI 요소입니다. 일반적으로 화면의 가장 위쪽 또는 아래쪽에 작은 팝업 형태로 나타납니다.
+또한, 일시적으로 정보를 제공하거나 사용자의 액션을 알리는데 사용됩니다.
+
+### Simple
+
+import Image from "next/image";
+
+<Image src="/SimpleToast.svg" alt="SimpleToast" width={360} height={60} />
+```js
+Toast({
+  text,
+  type = "Simple",
+  textSize = "xs",
+  textWeight = "medium",
+  titleSize = "sm",
+  button = false,
+})
+```
+
+
+### Success
+
+<Image src="/SuccessToast.svg" alt="SuccessToast" width={360} height={60} />
+```js
+Toast({
+  text,
+  type = "Success",
+  textSize = "xs",
+  textWeight = "medium",
+  titleSize = "sm",
+  button = false,
+})
+```
+
+
+
+### Error
+
+<Image src="/ErrorToast.svg" alt="ErrorToast" width={360} height={60} />
+```js
+Toast({
+  text,
+  type = "Error",
+  textSize = "xs",
+  textWeight = "medium",
+  titleSize = "sm",
+  button = false,
+})
+```
+
+
+
+### With Action
+
+<Image
+  src="/WithActionToast.svg"
+  alt="WithActionToast"
+  width={360}
+  height={60}
+/>
+
+```js
+Toast({
+  title,
+  text,
+  type = "With Action",
+  textSize = "xs",
+  textWeight = "medium",
+  titleSize = "sm",
+  button = true,
+})
+```
+
+### With Title
+
+<Image src="/WithTitleToast.svg" alt="WithTitleToast" width={360} height={60} />
+```js
+Toast({
+  title
+  text,
+  type = "With Title",
+  textSize = "xs",
+  textWeight = "medium",
+  titleSize = "sm",
+  button = false,
+})
+```
