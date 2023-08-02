@@ -1,7 +1,6 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "design": "디자인구성",
   "about": {
     "title": "About",
     "type": "page"
