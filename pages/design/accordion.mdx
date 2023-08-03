@@ -8,17 +8,45 @@ Accordion 위젯은 일반적으로 제목과 해당 섹션을 토글하는 기�
 
 import Image from "next/image";
 
-<Image
-  src="/AccordionDefault.png"
-  alt="AccordionDefault"
-  width={500}
-  height={60}
-/>
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image
+    src="/AccordionDefault.png"
+    alt="AccordionDefault"
+    width={500}
+    height={60}
+  />
+</div>
 
 ### Focus
 
 <br />
-<Image src="/AccordionFocus.png" alt="AccordionFocus" width={500} height={60} />
+
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image
+    src="/AccordionFocus.png"
+    alt="AccordionFocus"
+    width={500}
+    height={60}
+  />
+</div>
 
 ```js
 type AccordionProps = {

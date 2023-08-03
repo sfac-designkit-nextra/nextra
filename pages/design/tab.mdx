@@ -9,7 +9,18 @@ Tab은 다중 섹션 또는 콘텐츠를 구성하는 데 사용되는 인터페
 
 import Image from "next/image";
 
-<Image src="/Tab.png" alt="Tab" width={500} height={60} />
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image src="/Tab.png" alt="Tab" width={500} height={60} />
+</div>
 
 ```js
 Tab({
