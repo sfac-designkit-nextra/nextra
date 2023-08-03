@@ -1,0 +1,37 @@
+import Image from 'next/image'
+
+# Nav
+---
+Navigation Component는 시작지에서 어떤 목적지로 이동하는 걸 도와주는 컴포넌트입니다.
+
+### Default
+<br />
+
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+  <Image src="/Nav.png" alt="Nav" width={800} height={20}  />
+</div>
+```tsx /Nav/ /Gnb/ copy
+
+<Nav>
+    <Logo width={73} height={38} className="mr-[30px]" />
+    
+    <Gnb text="About" />
+    <Gnb text="About" linkTo="about" />
+    <Gnb text="About" linkTo="about" />
+    <Gnb text="About" linkTo="about" />
+    <Gnb text="About" linkTo="about" />
+
+    <Button
+      variant="secondary"
+      text="로그인"
+      className="!w-[88px] last:ml-auto"
+      textSize="sm"
+      textWeight="bold"
+      asChild
+    />
+</Nav>
+
+```
+
+- `Nav`안에 `Gnb` 작성
+- `Gnb`에서 `Text`와 `linkTo`로 원하는 타이틀과 주소를 작성 <small>(만약 linkTo에 아무것도 입력하지 않을 시 `/`으로 기본값 지정)</small>
