@@ -67,7 +67,7 @@ export const IconList = () => {
       {Icons.map(item => {
         const iconName = item.icon.replace('.svg', ''); 
         return (
-          <li key={item.icon} style={{ display: "flex", verticalAlign: "middle", width: "30%", margin: "5px", padding: "10px 20px", border: "0.5px solid gray", borderRadius: "8px", borderOpacity : ".8"}}>
+          <li key={item.icon} style={{ display: "flex", verticalAlign: "middle", width: "30%", margin: "5px", padding: "10px 20px", border: "0.5px solid gray", borderRadius: "8px"}}>
             <p style={{marginRight: "10px" }}>
               <Image
                 src={`/${item.icon}`}

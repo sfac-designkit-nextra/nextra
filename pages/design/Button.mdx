@@ -80,11 +80,22 @@ Button은 사용자가 클릭 또는 탭하여 특정 동작을 수행할 수 �
 ### Link
 <br />
 <div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
-  <span>default</span>
-  <Image src="/Link.png" alt="Ghost" width={423} height={50}  />
-  <br />
-  <span>hover</span>
-  <Image src="/Link_hover.png" alt="Ghost" width={423} height={50}  />
+  <ul style={{marginRight: "20px"}}>
+    <li style={{marginBottom: "5px"}}>
+      <small>default</small>
+    </li>
+    <li>
+      <Image src="/Link.png" alt="Link" width={423} height={50} style={{border: "1px solid #f6f6f6", borderRadius: "10px"}} />
+    </li>
+  </ul>
+  <ul>
+    <li style={{marginBottom: "5px"}}>
+      <small>hover</small>
+    </li>
+    <li>
+      <Image src="/Link_hover.png" alt="Link" width={423} height={50} style={{border: "1px solid #f6f6f6", borderRadius: "10px"}} />
+    </li>
+  </ul>
 </div>
 ```tsx /variant/ /text/ copy
 
@@ -103,10 +114,23 @@ Button은 사용자가 클릭 또는 탭하여 특정 동작을 수행할 수 �
 <br />
 
 <div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
-  <span>default</span>
-  <Image src="/Ghost.png" alt="Ghost" width={423} height={50}  />
-  <span>hover</span>
-  <Image src="/Ghost_hover.png" alt="Ghost" width={423} height={50}  />
+  <ul style={{marginRight: "20px"}}>
+    <li style={{marginBottom: "5px"}}>
+      <small>default</small>
+    </li>
+    <li>
+      <Image src="/Ghost.png" alt="Ghost" width={423} height={50} style={{border: "1px solid #f6f6f6", borderRadius: "10px", borderOpacity:".5" }} />
+    </li>
+  </ul>
+  <ul>
+    <li style={{marginBottom: "5px"}}>
+      <small>hover</small>
+    </li>
+    <li>
+      <Image src="/Ghost_hover.png" alt="Ghost" width={423} height={50}  />
+    </li>
+  </ul>
+
 </div>
 
 ```tsx /variant/ /text/ copy
