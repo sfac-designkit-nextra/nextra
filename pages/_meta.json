@@ -2,13 +2,7 @@
   "index": "Introduction",
   "design": "디자인 컴포넌트",
   "about": {
-    "title": "About",
+    "title": "스나이퍼팩토리란?",
     "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
-    "type": "page",
-    "href": "https://twitter.com/shuding_",
-    "newWindow": true
   }
 }
