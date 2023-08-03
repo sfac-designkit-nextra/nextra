@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 # Button
 ---
 Button은 사용자가 클릭 또는 탭하여 특정 동작을 수행할 수 있는 인터페이스 요소입니다. <br />
@@ -8,9 +10,10 @@ Button은 사용자가 클릭 또는 탭하여 특정 동작을 수행할 수 �
 <br />
 ### Primary
 <br />
-import Image from 'next/image'
 
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
 <Image src="/Primary.png" alt="Primary" width={423} height={50}  />
+</div>
 ```tsx /variant/ /text/ copy
 
   <Button 
@@ -24,7 +27,10 @@ import Image from 'next/image'
 <br />
 ### Destructive
 <br />
+
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
 <Image src="/Destructive.png" alt="Destructive" width={423} height={50}  />
+</div>
 ```tsx /variant/ /text/ copy
 
   <Button 
@@ -39,8 +45,9 @@ import Image from 'next/image'
 <br />
 ### Secondary
 <br />
-
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
 <Image src="/Secondary.png" alt="Secondary" width={423} height={50}  />
+</div>
 ```tsx /variant/ /text/ copy
 
   <Button 
@@ -55,8 +62,9 @@ import Image from 'next/image'
 <br />
 ### Outline
 <br />
-
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
 <Image src="/Outline.png" alt="Outline" width={423} height={50}  />
+</div>
 ```tsx /variant/ /text/ copy
 
   <Button 
@@ -71,7 +79,7 @@ import Image from 'next/image'
 <br />
 ### Link
 <br />
-<div>
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
   <span>default</span>
   <Image src="/Link.png" alt="Ghost" width={423} height={50}  />
   <br />
@@ -94,10 +102,9 @@ import Image from 'next/image'
 ### Ghost
 <br />
 
-<div>
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
   <span>default</span>
   <Image src="/Ghost.png" alt="Ghost" width={423} height={50}  />
-  <br />
   <span>hover</span>
   <Image src="/Ghost_hover.png" alt="Ghost" width={423} height={50}  />
 </div>
@@ -116,8 +123,9 @@ import Image from 'next/image'
 <br />
 ### Disabled
 <br />
-
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
 <Image src="/Disabled.png" alt="disabled" width={423} height={50} />
+</div>
 ```tsx {5} copy
 
   <Button 
@@ -133,8 +141,9 @@ import Image from 'next/image'
 <br />
 ### asChild
 <br />
-
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
 <Image src="/AsChild.png" alt="AsChild" width={116} height={37} />
+</div>
 ```tsx {5} copy
 
   <Button 
