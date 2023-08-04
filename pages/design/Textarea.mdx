@@ -1,0 +1,73 @@
+import Image from "next/image";
+
+# Textarea
+
+Textarea는 제목과 작성자
+
+## title
+
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image src="/Textarea1.png" alt="Hello" width={500} height={500} />
+</div>
+```tsx
+<Textarea mode="title" onChangeTitle={test} onChangeAuthor={test2} />
+// onChangeTitle = 제목, onChangeAuthor = 작성자
+
+````
+
+mode="title"은 제목과 작성자를 입력받을 수 있습니다
+
+<br />
+
+## content
+
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image src="/Textarea2.png" alt="Hello" width={500} height={1000} />
+
+</div>
+
+```tsx
+<Textarea mode="content" onChangeContent={test3} />
+// onChangeContent = 내용 입력값
+
+````
+
+<br />
+
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image src="/Textarea3.png" alt="Hello" width={500} height={1000} />
+
+</div>
+
+```tsx
+<Textarea mode="content" onChangeContent={test3} disabled />
+```
+
+content의 disabled 버전입니다

@@ -1,0 +1,24 @@
+import Image from "next/image";
+
+# input
+
+Input 컴포넌트는 이메일 정보를 입력받을 때 사용합니다
+
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image src="/Input.png" alt="Hello" width={500} height={500} />
+</div>
+
+```tsx
+<Input onChangeInputDefault={test1} />
+<Input mode="Text" onChangeInputText={test2} />
+<Input mode="Label" onChangeInputLabel={test3} />
+```
