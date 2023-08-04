@@ -1,0 +1,36 @@
+import Image from 'next/image';
+import AvatarExample from '../../public/Avatar.png';
+import StyledAvatar from '../../public/Avatar_styled.png';
+
+# Avatar
+`Avatar` 컴포넌트는 사용자를 나타내는 원입니다. 일반적으로 사용자의 프로필 이미지와 함께 사용하거나 이미지가 없는 경우 기본 이미지가 출력됩니다.
+
+ 
+### Default
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+  <Image src={AvatarExample} alt="Avatar Component usage example" height={34} />
+</div>
+
+```tsx
+<Avatar />
+```
+
+
+### Style
+
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+  <Image src={StyledAvatar} alt="Avatar Component usage example" height={100} />
+</div>
+
+```tsx
+<Avatar
+  src="https://www.gravatar.com/avatar/9017a5f22556ae0eb7fb0710711ec125?s=128"
+  size={100}
+  border={true}
+  borderColor="border-Meaningful-red"
+  alt="user profile"
+  className="bg-slate-400"
+/>
+```
+각 속성들을 위와 같이 커스텀하여 사용할 수 있으며,
+그 외 스타일링이 필요한 부분은 tailwind css 문법에 맞게 `className`의 속성 값으로 적용하면 됩니다.
