@@ -2,7 +2,9 @@ import Image from "next/image";
 
 # Textarea
 
-Textarea는 제목과 작성자
+`Textarea` 컴포넌트는 여러 줄의 텍스트를 입력받기 위한 요소입니다. 기본적인 input 요소는 일반적으로 한 줄의 텍스트만 입력받기에 적합하지만,
+
+textarea는 여러 줄의 텍스트 입력을 가능하게 합니다.
 
 ## title
 
@@ -16,16 +18,15 @@ Textarea는 제목과 작성자
     padding: "32px",
   }}
 >
-  <Image src="/Textarea1.png" alt="Hello" width={500} height={500} />
+  <Image src="/title/title.svg" alt="Hello" width={500} height={500} />
 </div>
 ```tsx
-<Textarea mode="title" onChangeTitle={test} onChangeAuthor={test2} />
-// onChangeTitle = 제목, onChangeAuthor = 작성자
+
+<Textarea mode="title" />
 
 ````
 
-mode="title"은 제목과 작성자를 입력받을 수 있습니다
-
+<br />
 <br />
 
 ## content
@@ -40,17 +41,20 @@ mode="title"은 제목과 작성자를 입력받을 수 있습니다
     padding: "32px",
   }}
 >
-  <Image src="/Textarea2.png" alt="Hello" width={500} height={1000} />
+  <Image src="/Textarea/Default.svg" alt="Hello" width={500} height={1000} />
 
 </div>
 
 ```tsx
-<Textarea mode="content" onChangeContent={test3} />
-// onChangeContent = 내용 입력값
+
+<Textarea mode="content"/>
 
 ````
 
 <br />
+<br />
+
+## Disabled
 
 <div
   style={{
@@ -62,12 +66,10 @@ mode="title"은 제목과 작성자를 입력받을 수 있습니다
     padding: "32px",
   }}
 >
-  <Image src="/Textarea3.png" alt="Hello" width={500} height={1000} />
+  <Image src="/Textarea/Disabled.svg" alt="Hello" width={500} height={1000} />
 
 </div>
 
 ```tsx
-<Textarea mode="content" onChangeContent={test3} disabled />
+<Textarea mode="content" disabled />
 ```
-
-content의 disabled 버전입니다
