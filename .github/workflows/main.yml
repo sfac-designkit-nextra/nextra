@@ -21,8 +21,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.SFAC_DESIGNKIT_NEXTRA }}
         with:
           source-directory: 'output'
-          destination-github-username: sfac-designkit-nextra
-          destination-repository-name: nextra
+          destination-github-username: hayeonn2
+          destination-repository-name: sfac-designkit-nextra
           user-email: ${{ secrets.ACCOUNT_EMAIL }}
           commit-message: ${{ github.event.commits[0].message }}
           target-branch: main
