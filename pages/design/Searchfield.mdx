@@ -14,20 +14,30 @@ Searchfield는 검색 기능을 구현할 때 사용하는 컴포넌트입니다
     justifyContent: "center",
     alignItems: "center",
     padding: "32px",
-  }}
+}}
+
 >
-  <Image
-    src="/Searchfield/Default.svg"
-    alt="Searchfield"
-    width={300}
-    height={300}
-  />
+
+  <div style={{
+    display: "block"
+  }}>
+    <Image
+      src="/Searchfield/Default.svg"
+      alt="Searchfield"
+      width={300}
+      height={300}
+    />
+  </div>
+  <div style={{
+    display: "block"
+  }}>
   <Image
     src="/Searchfield/Focused.svg"
     alt="Searchfield"
     width={300}
     height={300}
   />
+  </div>
 </div>
 
 ```tsx
