@@ -2,6 +2,8 @@
 
 토스트(Toast)는 사용자에게 간단한 메시지나 알림을 표시하는 UI 요소입니다. 일반적으로 화면의 가장 위쪽 또는 아래쪽에 작은 팝업 형태로 나타납니다.
 또한, 일시적으로 정보를 제공하거나 사용자의 액션을 알리는데 사용됩니다.
+각 Toast에는 6가지의 `type`이 있으며 `type`에 따라 사용할 수 있는 `title, text,
+button`속성이 있습니다.
 
 ### Simple
 
@@ -23,14 +25,7 @@ import Image from "next/image";
 </div>
 
 ```js
-Toast({
-  text,
-  type = "Simple",
-  textSize = "xs",
-  textWeight = "medium",
-  titleSize = "sm",
-  button = false,
-})
+<Toast type="Simple" text="틀린 회원정보입니다. 다시 로그인해주세요." />
 ```
 
 ### Success
@@ -51,14 +46,7 @@ Toast({
 </div>
 
 ```js
-Toast({
-  text,
-  type = "Success",
-  textSize = "xs",
-  textWeight = "medium",
-  titleSize = "sm",
-  button = false,
-})
+<Toast type="Success" text="틀린 회원정보입니다. 다시 로그인해주세요." />
 ```
 
 ### Error
@@ -79,14 +67,7 @@ Toast({
 </div>
 
 ```js
-Toast({
-  text,
-  type = "Error",
-  textSize = "xs",
-  textWeight = "medium",
-  titleSize = "sm",
-  button = false,
-})
+<Toast type="Error" text="틀린 회원정보입니다. 다시 로그인해주세요." />
 ```
 
 ### With Action
@@ -112,15 +93,12 @@ Toast({
 </div>
 
 ```js
-Toast({
-  title,
-  text,
-  type = "With Action",
-  textSize = "xs",
-  textWeight = "medium",
-  titleSize = "sm",
-  button = true,
-})
+<Toast
+  type="With Action"
+  button
+  title="로그인 실패"
+  text="틀린 회원정보입니다. 다시 로그인해주세요."
+/>
 ```
 
 ### With Title
@@ -146,13 +124,9 @@ Toast({
 </div>
 
 ```js
-Toast({
-  title
-  text,
-  type = "With Title",
-  textSize = "xs",
-  textWeight = "medium",
-  titleSize = "sm",
-  button = false,
-})
+<Toast
+  type="With Title"
+  title="로그인 실패"
+  text="틀린 회원정보입니다. 다시 로그인해주세요."
+/>
 ```
