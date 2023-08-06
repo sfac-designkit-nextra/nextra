@@ -1,10 +1,11 @@
 # Toast
 
-토스트(Toast)는 사용자에게 간단한 메시지나 알림을 표시하는 UI 요소입니다. 일반적으로 화면의 가장 위쪽 또는 아래쪽에 작은 팝업 형태로 나타납니다.
-또한, 일시적으로 정보를 제공하거나 사용자의 액션을 알리는데 사용됩니다.
+토스트(Toast)는 사용자에게 간단한 메시지나 알림을 표시하는 UI 요소입니다. <br />
+일반적으로 화면의 가장 위쪽 또는 아래쪽에 작은 팝업 형태로 나타납니다.<br />
+또한, 일시적으로 정보를 제공하거나 사용자의 액션을 알리는데 사용됩니다.<br />
 각 Toast에는 6가지의 `type`이 있으며 `type`에 따라 사용할 수 있는 `title, text,
 button`속성이 있습니다.
-
+<br />
 ### Simple
 
 <br />
@@ -24,10 +25,15 @@ import Image from "next/image";
   <Image src="/SimpleToast.svg" alt="SimpleToast" width={360} height={60} />
 </div>
 
-```js
-<Toast type="Simple" text="틀린 회원정보입니다. 다시 로그인해주세요." />
-```
+```tsx /type/ /text/ copy
 
+  <Toast 
+    type="Simple" 
+    text="틀린 회원정보입니다. 다시 로그인해주세요." 
+  />
+
+```
+<br />
 ### Success
 
 <br />
@@ -45,10 +51,15 @@ import Image from "next/image";
   <Image src="/SuccessToast.svg" alt="SuccessToast" width={360} height={60} />
 </div>
 
-```js
-<Toast type="Success" text="틀린 회원정보입니다. 다시 로그인해주세요." />
-```
+```tsx /Success/ copy
 
+  <Toast 
+    type="Success" 
+    text="틀린 회원정보입니다. 다시 로그인해주세요." 
+  />
+
+```
+<br />
 ### Error
 
 <br />
@@ -66,10 +77,16 @@ import Image from "next/image";
   <Image src="/ErrorToast.svg" alt="ErrorToast" width={360} height={60} />
 </div>
 
-```js
-<Toast type="Error" text="틀린 회원정보입니다. 다시 로그인해주세요." />
-```
 
+```tsx /Error/ copy
+
+  <Toast 
+    type="Error" 
+    text="틀린 회원정보입니다. 다시 로그인해주세요." 
+  />
+
+```
+<br />
 ### With Action
 
 <br />
@@ -92,15 +109,17 @@ import Image from "next/image";
   />
 </div>
 
-```js
-<Toast
-  type="With Action"
-  button
-  title="로그인 실패"
-  text="틀린 회원정보입니다. 다시 로그인해주세요."
-/>
-```
+```tsx {3-6} copy
 
+  <Toast
+    type="With Action"
+    button
+    title="로그인 실패"
+    text="틀린 회원정보입니다. 다시 로그인해주세요."
+  />
+
+```
+<br />
 ### With Title
 
 <br />
@@ -123,10 +142,12 @@ import Image from "next/image";
   />
 </div>
 
-```js
-<Toast
-  type="With Title"
-  title="로그인 실패"
-  text="틀린 회원정보입니다. 다시 로그인해주세요."
-/>
+```tsx {3-5} copy
+
+  <Toast
+    type="With Title"
+    title="로그인 실패"
+    text="틀린 회원정보입니다. 다시 로그인해주세요."
+  />
+
 ```
