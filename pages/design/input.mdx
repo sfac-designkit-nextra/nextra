@@ -2,7 +2,8 @@ import Image from "next/image";
 
 # Input
 
-`Input` 컴포넌트는 사용자로부터 데이터를 입력받기 위한 요소입니다.<br /> 웹 페이지나 애플리케이션에서 텍스트, 비밀번호, 이메일 주소 등의 정보를 입력받기 위해 주로 사용됩니다.
+Input 컴포넌트는 사용자로부터 데이터를 입력받기 위한 요소입니다.<br /> 웹 페이지나 애플리케이션에서 텍스트, 비밀번호, 이메일 주소 등의 정보를 입력받기 위해 주로 사용됩니다.
+
 <br />
 <br />
 ## Default
@@ -20,10 +21,8 @@ import Image from "next/image";
   <Image src="/Input/Default.svg" alt="Hello" width={500} height={500} />
 </div>
 
-```tsx /textPlace/
-
-  <Input textPlace="이메일주소" />
-
+```tsx /type/ /placeholder/ copy
+<Input type="text" /* input type */ placeholder="이메일주소" />
 ```
 
 <br />
@@ -43,14 +42,13 @@ import Image from "next/image";
   <Image src="/Input/With Label.svg" alt="Hello" width={500} height={500} />
 </div>
 
-```tsx {3-5}
-
-  <Input 
-    mode="Label" /* Label 모드 */
-    textPlace="이메일주소" /* placeholder에 들어갈 Text */
-    label="이메일" /* Label에 들어갈 Text */
-  />
-
+```tsx {4-5} copy
+<Input
+  type="text" /* input type */
+  placeholder="이메일 주소" /* placeholder에 들어갈 Text */
+  label="이메일" /* label에 들어갈 Text */
+  labelColor="blue" /* label 색상 */
+/>
 ```
 
 <br />
@@ -70,15 +68,13 @@ import Image from "next/image";
   <Image src="/Input/With Text.svg" alt="Hello" width={500} height={500} />
 </div>
 
-```tsx {3-6} copy
-
-  <Input
-    mode="Text" /* Text 모드 */
-    textPlace="이메일주소" /* placeholder에 들어갈 Text */
-    label="이메일" /* Label에 들어갈 Text */
-    addText="이메일 주소를 입력하세요" /* BottomText에 들어갈 Text */
-  />
-
+```tsx {6-7} copy
+<Input
+  type="text" /* input type */
+  placeholder="이메일 주소" /* placeholder에 들어갈 Text */
+  label="이메일" /* Label에 들어갈 Text */
+  labelColor="blue" /* label 색상 */
+  text="이메일 주소를 입력하세요" /* BottomText에 들어갈 Text */
+  textColor="gray" /* BottomText에 들어갈 색상 */
+/>
 ```
-
-
