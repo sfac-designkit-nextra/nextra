@@ -1,6 +1,6 @@
 # Tab
 
-Tab은 다중 섹션 또는 콘텐츠를 구성하는 데 사용되는 인터페이스 요소입니다.
+Tab은 다중 섹션 또는 콘텐츠를 구성하는 데 사용되는 인터페이스 요소입니다.<br />
 사용자가 다양한 카테고리, 탭 메뉴, 설정 옵션 등 각각의 섹션을 쉽게 탐색하고 액세스할 수 있도록 돕는 데 사용됩니다.
 
 ### Default
@@ -22,10 +22,12 @@ import Image from "next/image";
   <Image src="/Tab.png" alt="Tab" width={500} height={60} />
 </div>
 
-```js
-<Tab
-  text="Tab1"
-  active /* 클릭했을 때 active 속성 */
-  /* 원하는 코드 추가 가능 */
-/>
+```tsx {3-4} copy
+
+  <Tab
+    text="Tab1"
+    active /* 클릭했을 때 active 속성 */
+    /* 원하는 코드 추가 가능 */
+  />
+
 ```

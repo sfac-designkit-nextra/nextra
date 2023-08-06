@@ -1,0 +1,70 @@
+import Image from 'next/image';
+import TextExample from "../../public/Text.png";
+
+# Text
+
+Text 컴포넌트는 디자인 시스템 내에 적용된 폰트 설정들을 손쉽게 적용하여 내용을 작성할 수 있게끔 도와주는 컴포넌트입니다. <br />
+부모 노드에 시맨틱 태그를 사용하여 시맨틱 마크업을 할 수 있도록 Text 컴포넌트 내부는 `span` 태그로 구성하였습니다. <br />
+시맨틱 태그 안에 `Text` 컴포넌트를 위치시켜 웹 접근성을 준수한 마크업이 가능합니다. 
+
+### Default
+ 
+
+```tsx copy
+
+  <Text>텍스트</Text>
+
+```
+
+<br /><br />
+
+### Using example
+
+`size`와 `weight` 값을 통해 5종류의 크기와 3종류의 굵기 정도를 조절할 수 있습니다.<br />
+그 외 스타일링이 필요한 부분은 tailwind css 문법에 맞게 `className`의 속성 값으로 적용하면 됩니다.
+
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+  <Image src={TextExample} alt="Text Component usage example" width={500} />
+</div>
+```tsx /size/ /weight/ copy
+
+  <Text size="base" weight="medium" className="text-color-Grayscale-100" >
+    content
+  </Text>
+
+```
+<br />
+<table style={{textAlign: "left"}}>
+  <thead>
+    <tr>
+      <th style={{width: "20%", padding: "5px"}}>Size</th>
+      <th style={{width: "50%", padding: "5px"}}>weight (B,M,R)</th>
+      <th style={{padding: "5px"}}>Description</th>
+    </tr>
+  </thead>
+  
+  <tbody style={{fontSize: "0.9rem"}}>
+    <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>base</td>
+      <td rowspan="5">`medium`, `semibold`, `bold`</td>
+      <td>`Body3_16` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>xs</td>
+      <td>`Body5_12` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>sm</td>
+      <td>`Body4_15` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>lg</td>
+      <td>`Body2_18` 을 나타냅니다.</td>
+    </tr>
+    <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>xl</td>
+      <td>`Body1_20` 을 나타냅니다.</td>
+    </tr>
+  </tbody>
+</table> 

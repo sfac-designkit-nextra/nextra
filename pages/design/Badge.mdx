@@ -2,14 +2,15 @@ import Image from "next/image";
 
 # Badge
 
-Badge 컴포넌트는 UI(사용자 인터페이스) 디자인에서 자주 사용되는
-작은 정보 표시 요소입니다. 주로 알림, 카운트, 라벨, 상태 등을 사용자에게
-알리기 위해 사용됩니다. Badge 컴포넌트는 이메일 앱의 읽지 않은 메일 수,
-소셜 미디어 앱의 알림 수, 쇼핑 카트의 아이템 수 등과 같은 정보를
-표시하는 데 유용합니다.
-
+Badge 컴포넌트는 UI(사용자 인터페이스) 디자인에서 자주 사용되는 작은 정보 표시 요소입니다. <br />
+주로 알림, 카운트, 라벨, 상태 등을 사용자에게 알리기 위해 사용됩니다. <br />
+Badge 컴포넌트는 이메일 앱의 읽지 않은 메일 수,소셜 미디어 앱의 알림 수 등과 같은 정보를 표시하는 데 유용합니다.
+<br /><br />
 ## Default
 
+Badge 컴포넌트는 span 태그로 되어있으며, <br />
+`color 속성값`으로 원하는 디자인을 선택해 사용할 수 있습니다
+<br />
 <div
   style={{
     border: "0.5px solid gray",
@@ -23,10 +24,12 @@ Badge 컴포넌트는 UI(사용자 인터페이스) 디자인에서 자주 사�
   <Image src="/Badge/Default.svg" alt="Badge" width={80} height={80} />
 </div>
 
-```tsx
-<Badge>무료강의</Badge>
-```
+```tsx copy
 
+  <Badge>무료강의</Badge>
+
+```
+<br />
 ## Secondary
 
 <div
@@ -42,10 +45,12 @@ Badge 컴포넌트는 UI(사용자 인터페이스) 디자인에서 자주 사�
   <Image src="/Badge/Secondary.svg" alt="Badge" width={80} height={80} />
 </div>
 
-```tsx
-<Badge color="Secondary">무료강의</Badge>
-```
+```tsx copy
 
+  <Badge color="Secondary">무료강의</Badge>
+
+```
+<br />
 ## Outline
 
 <div
@@ -61,10 +66,12 @@ Badge 컴포넌트는 UI(사용자 인터페이스) 디자인에서 자주 사�
   <Image src="/Badge/Outline.svg" alt="Badge" width={80} height={80} />
 </div>
 
-```tsx
-<Badge color="Outline">무료강의</Badge>
-```
+```tsx copy
 
+  <Badge color="Outline">무료강의</Badge>
+
+```
+<br />
 ## Destructive
 
 <div
@@ -80,9 +87,9 @@ Badge 컴포넌트는 UI(사용자 인터페이스) 디자인에서 자주 사�
   <Image src="/Badge/Destructive.svg" alt="Badge" width={80} height={80} />
 </div>
 
-```tsx
-<Badge color="Destructive">무료강의</Badge>
+```tsx copy
+
+  <Badge color="Destructive">무료강의</Badge>
+
 ```
 
-Badge 컴포넌트는 span 태그로 되어있으며, <br />
-color 속성값으로 원하는 디자인을 선택해 사용할 수 있습니다

@@ -1,9 +1,10 @@
 import Image from "next/image";
 
-# input
+# Input
 
 `Input` 컴포넌트는 사용자로부터 데이터를 입력받기 위한 요소입니다.<br /> 웹 페이지나 애플리케이션에서 텍스트, 비밀번호, 이메일 주소 등의 정보를 입력받기 위해 주로 사용됩니다.
-
+<br />
+<br />
 ## Default
 
 <div
@@ -19,35 +20,10 @@ import Image from "next/image";
   <Image src="/Input/Default.svg" alt="Hello" width={500} height={500} />
 </div>
 
-```tsx
-<Input textPlace="이메일주소" />
-```
+```tsx /textPlace/
 
-<br />
-<br />
+  <Input textPlace="이메일주소" />
 
-## Text
-
-<div
-  style={{
-    border: "0.5px solid gray",
-    borderRadius: "8px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "32px",
-  }}
->
-  <Image src="/Input/With Text.svg" alt="Hello" width={500} height={500} />
-</div>
-
-```tsx
-<Input
-  mode="Text"
-  textPlace="이메일주소"
-  label="이메일"
-  addText="이메일 주소를 입력하세요"
-/>
 ```
 
 <br />
@@ -67,6 +43,42 @@ import Image from "next/image";
   <Image src="/Input/With Label.svg" alt="Hello" width={500} height={500} />
 </div>
 
-```tsx
-<Input mode="Label" textPlace="이메일주소" label="이메일" />
+```tsx {3-5}
+
+  <Input 
+    mode="Label" /* Label 모드 */
+    textPlace="이메일주소" /* placeholder에 들어갈 Text */
+    label="이메일" /* Label에 들어갈 Text */
+  />
+
 ```
+
+<br />
+<br />
+## Text
+
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image src="/Input/With Text.svg" alt="Hello" width={500} height={500} />
+</div>
+
+```tsx {3-6} copy
+
+  <Input
+    mode="Text" /* Text 모드 */
+    textPlace="이메일주소" /* placeholder에 들어갈 Text */
+    label="이메일" /* Label에 들어갈 Text */
+    addText="이메일 주소를 입력하세요" /* BottomText에 들어갈 Text */
+  />
+
+```
+
+

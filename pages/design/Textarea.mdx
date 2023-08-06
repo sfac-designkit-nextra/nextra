@@ -2,11 +2,11 @@ import Image from "next/image";
 
 # Textarea
 
-`Textarea` 컴포넌트는 여러 줄의 텍스트를 입력받기 위한 요소입니다. 기본적인 input 요소는 일반적으로 한 줄의 텍스트만 입력받기에 적합하지만,
-
+`Textarea` 컴포넌트는 여러 줄의 텍스트를 입력받기 위한 요소입니다. <br />
+기본적인 input 요소는 일반적으로 한 줄의 텍스트만 입력받기에 적합하지만, <br />
 textarea는 여러 줄의 텍스트 입력을 가능하게 합니다.
 
-## title
+## Title
 
 <div
   style={{
@@ -20,16 +20,17 @@ textarea는 여러 줄의 텍스트 입력을 가능하게 합니다.
 >
   <Image src="/title/title.svg" alt="Hello" width={500} height={500} />
 </div>
-```tsx
 
-<Textarea mode="title" />
+```tsx /mode/ copy
 
-````
+  <Textarea mode="title" />
+
+```
 
 <br />
 <br />
 
-## content
+## Content
 
 <div
   style={{
@@ -41,15 +42,15 @@ textarea는 여러 줄의 텍스트 입력을 가능하게 합니다.
     padding: "32px",
   }}
 >
-  <Image src="/Textarea/Default.svg" alt="Hello" width={500} height={1000} />
+  <Image src="/TextArea/Default.svg" alt="Hello" width={500} height={1000} />
 
 </div>
 
-```tsx
+```tsx /mode/ copy
 
-<Textarea mode="content"/>
+  <Textarea mode="content"/>
 
-````
+```
 
 <br />
 <br />
@@ -70,6 +71,8 @@ textarea는 여러 줄의 텍스트 입력을 가능하게 합니다.
 
 </div>
 
-```tsx
-<Textarea mode="content" disabled />
+```tsx /mode/ /disabled/ copy
+
+  <Textarea mode="content" disabled />
+
 ```
