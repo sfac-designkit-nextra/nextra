@@ -1,6 +1,6 @@
 # Date Selector
 
-Date Selector는 사용자가 원하는 날짜를 선택하는데 도움을 주는 UI 컴포넌트입니다. <br />주로 웹 애플리케이션에서 날짜를 입력해야 할 때 사용되며, 사용자가 캘린더 형태로 날짜를 선택할 수 있도록 제공됩니다.
+Date Selector는 사용자가 원하는 날짜를 선택하는데 도움을 주는 UI 컴포넌트입니다. 주로 웹 애플리케이션에서 날짜를 입력해야 할 때 사용되며, 사용자가 캘린더 형태로 날짜를 선택할 수 있도록 제공됩니다.
 
 ### Default
 
@@ -21,20 +21,30 @@ import Image from "next/image";
   <Image src="/DatePicker.svg" alt="Date Selector" width={261} height={328} />
 </div>
 
-<br />
-<br />
-### Import DateSelector
+```js
+// useState를 이용한 상태관리
+const [dates, setDates] = useState({
+  startDate: null, // 시작일
+  endDate: null, // 종료일
+});
 
-```tsx copy
+// 기간을 정하는 함수
+const setChangeDate = (select) => {
+  const [start, end] = select;
+  setDates({
+    startDate: start,
+    endDate: end,
+  });
+};
 
-  import DatePicker from "./DateSelector";
-
+<DateSelector
+  selected={dates.startDate} // 선택일
+  startDate={dates.startDate} // 시작일
+  endDate={dates.endDate} // 종료일
+  ChangeDate={setChangeDate} // 기간을 정하는 함수
+/>;
 ```
-<br />
-### Using example
 
-```tsx copy
-
-  <DateSelector />
-
-```
+`useState`를 이용해 상태관리를 하며 초기값으로 `startDate`와 `endDate`라는 2개의 프로퍼티를 가집니다.
+`selected` 속성은 가장 처음 선택한 날짜이며 `startDate`와 `endDate`, `ChangeDate` 속성을 통해 기간을 정할 수 있습니다.
+추가적으로 `dateFormat`은 날짜를 어떤 형식으로 보여줄지 정하는 속성이며 `default`는 `"yyyy. MM. dd"`입니다.
