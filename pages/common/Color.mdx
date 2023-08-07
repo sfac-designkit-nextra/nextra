@@ -1,0 +1,103 @@
+import Image from 'next/image'
+
+# Color
+---
+Color System은 색상을 체계적으로 표현하고 관리하는 방법입니다.<br />
+Color System에는 `Primary`, `Grayscale`, `Meaningful color`로 나눠져 있습니다.
+<br />
+<br />
+
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+    <ul>
+    <li style={{marginBottom:"15px"}}>
+    <p><small>Primary</small></p>
+    <Image src="/pr.png" alt="Primary" width={423} height={50}  /></li>
+    <li style={{marginBottom:"15px"}}>
+    <p><small>Grayscale</small></p>
+    <Image src="/gr.png" alt="Primary" width={423} height={50}  /></li>
+    <li style={{marginBottom:"15px"}}>
+    <p><small>Meaningful</small></p>
+    <Image src="/Meaningful.png" alt="Primary" width={423} height={72}  /></li>
+  </ul>
+</div>
+
+```js tailwind.config.js /Primary/ /Grayscale/ /Meaningful/ copy
+
+    colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        white: "#ffffff",
+        Primary: {
+          5: "#F5F8FF",
+          10: "#E5EEFF",
+          20: "#CCDEFF",
+          30: "#B2CDFF",
+          40: "#99BDFF",
+          50: "#7FACFF",
+          60: "#669BFF",
+          70: "#4C8BFF",
+          80: "#337AFF",
+          90: "#196AFF",
+          100: "#0059FF",
+        },
+        Grayscale: {
+          5: "#F3F3F3",
+          10: "#E6E6E6",
+          20: "#CCCCCC",
+          30: "#B3B3B3",
+          40: "#999999",
+          50: "#808080",
+          60: "#666666",
+          70: "#4D4D4D",
+          80: "#333333",
+          90: "#1A1A1A",
+          100: "#030303",
+        },
+        Meaningful: {
+          red: "#FF0000",
+          green: "#07A320",
+        },
+      },
+
+```
+<br />
+### Usage example
+
+<b>`text`색상 변경 예시</b><br />
+`Meaningful` 생상 사용시에는 정의 되어있는 `red`, `green`으로만 사용 가능합니다.
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+    <Image src="/eg01.png" alt="example" width={232} height={38}  />
+</div>
+```tsx /-Grayscale-/ /-Meaningful-red/ copy
+
+    <Text size={"base"} weight={"medium"} className="text-Grayscale-100" >
+      content
+    </Text>
+
+    <Text size={"base"} weight={"medium"} className="text-Meaningful-red" >
+      content
+    </Text>
+
+```
+
+<br />
+<br />
+
+
+<b>`background`색상 변경 예시</b><br />
+className에 Colors를 추가하여 사용
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+    <Image src="/eg02.png" alt="example" width={191} height={48}  />
+</div>
+<br />
+```tsx /-Primary-/ copy
+
+    <div className="bg-Primary-100" >
+      <Text size={"base"} weight={"medium"} className="text-Meaningful-red" >
+        content
+      </Text>
+    </div>
+    
+```

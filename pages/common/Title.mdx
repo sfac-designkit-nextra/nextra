@@ -1,0 +1,52 @@
+import Image from 'next/image';
+import TitleExample from "../../public/Title.png";
+
+# Title
+Title 컴포넌트는 디자인 시스템 내에 적용된 제목 폰트 설정들을 사전 적용하여 손쉽게 제목 태그들을 표시할 수 있도록 도와주는 컴포넌트 입니다. 
+<br />
+<br />
+### Default
+
+`size` 속성의 값을 통해 4종류의 제목 폰트를 사용할 수 있습니다. <br />
+그 외 스타일링이 필요한 부분은 tailwind css 문법에 맞게 `className`의 속성 값으로 적용하면 됩니다.
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+  <Image src={TitleExample} alt="Title Component usage example" height={200} />
+</div>
+
+```tsx /size/ copy
+
+  <Title size="4xl">H1_32_B</Title>
+  <Title size="3xl">H2_28_B</Title>
+  <Title size="2xl">H3_24_B</Title>
+  <Title size="xl">H4_20_B</Title>
+
+```
+<br />
+<table style={{textAlign: "left", width: "100%"}}>
+  <thead>
+    <tr>
+      <th style={{width: "20%", padding: "5px"}}>Size</th>
+      <th style={{padding: "5px"}}>Description</th>
+    </tr>
+  </thead>
+  
+  <tbody style={{fontSize: "0.9rem"}}>
+    <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>4xl</td>
+      <td>`H1_32_B` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>3xl</td>
+      <td>`H2_28_B` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>2xl</td>
+      <td>`H3_24_B` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>xl</td>
+      <td>`H4_20_B` 을 나타냅니다.</td>
+    </tr>
+  </tbody>
+</table> 

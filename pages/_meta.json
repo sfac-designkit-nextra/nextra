@@ -1,6 +1,12 @@
 {
   "index": "Introduction",
-  "design": "디자인 컴포넌트",
+  "installation" : "Installation",
+  "--": {
+    "type": "separator",
+    "title": "Component"
+  },
+  "common": "Common Component",
+  "design": "Design Component",
   "about": {
     "title": "스나이퍼팩토리란?",
     "type": "page"
