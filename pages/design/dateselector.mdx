@@ -22,9 +22,29 @@ import Image from "next/image";
 </div>
 
 ```js
-import DatePicker from "./DateSelector";
+// useState를 이용한 상태관리
+const [dates, setDates] = useState({
+  startDate: null, // 시작일
+  endDate: null, // 종료일
+});
+
+// 기간을 정하는 함수
+const setChangeDate = (select) => {
+  const [start, end] = select;
+  setDates({
+    startDate: start,
+    endDate: end,
+  });
+};
+
+<DateSelector
+  selected={dates.startDate} // 선택일
+  startDate={dates.startDate} // 시작일
+  endDate={dates.endDate} // 종료일
+  ChangeDate={setChangeDate} // 기간을 정하는 함수
+/>;
 ```
 
-```js
-<DateSelector />
-```
+`useState`를 이용해 상태관리를 하며 초기값으로 `startDate`와 `endDate`라는 2개의 프로퍼티를 가집니다.
+`selected` 속성은 가장 처음 선택한 날짜이며 `startDate`와 `endDate`, `ChangeDate` 속성을 통해 기간을 정할 수 있습니다.
+추가적으로 `dateFormat`은 날짜를 어떤 형식으로 보여줄지 정하는 속성이며 `default`는 `"yyyy. MM. dd"`입니다.
