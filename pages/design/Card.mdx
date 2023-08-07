@@ -1,0 +1,133 @@
+import Image from 'next/image'
+
+
+# Card
+---
+Card 컴포넌트는 사용자에게 간결하고 구조화된 정보를 제공하기 위한 UI 요소입니다. 이미지, 제목, 내용 및 액션 버튼 등 다양한 내용을 포함하여 유연하게 활용할 수 있습니다.
+
+<br />
+<br />
+### Assignment
+> 제출한 과제를 담을 수 있는 카드입니다.
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/Assignment.svg" alt="Assignment" width={423} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+<Card CardType="Assignment">
+  /** 구성할 내용들 */
+</Card>
+```
+<br />
+<br />
+### AssignmentComment
+> 제출한 과제에 대한 댓글을 담을 수 있는 카드입니다.
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/AssignmentComment.svg" alt="AssignmentComment" width={423} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+<Card CardType="AssignmentComment">
+  /** 구성할 내용들 */
+</Card>
+```
+<br />
+<br />
+### AssignmentList
+> 과제들을 리스트화할 때 담을 수 있는 카드입니다.
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/AssignmentList.svg" alt="AssignmentList" width={423} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+<Card CardType="AssignmentList">
+  /** 구성할 내용들 */
+</Card>
+```
+<br />
+<br />
+### Post
+> 커뮤니티 게시글을 담을 수 있는 카드입니다.
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/Post.svg" alt="Post" width={423} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+<Card CardType="Post">
+  /** 구성할 내용들 */
+</Card>
+```
+<br />
+<br />
+### Comment
+> 댓글을 담을 수 있는 카드입니다.
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/Comment.svg" alt="Comment" width={423} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+<Card CardType="Comment">
+  /** 구성할 내용들 */
+</Card>
+```
+<br />
+<br />
+### Content
+> 텍스트를 담는 외곽선이 없는 카드입니다.
+<br />
+
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/Content.svg" alt="Content" width={200} height={50}  />
+</div>
+```tsx /variant/ /text/ copy  
+<Card CardType="Content">
+  /** 구성할 내용들 */
+</Card>
+```
+<br />
+<br />
+### Lecture
+> 강의를 담을 수 있는 카드입니다. 
+<br />
+
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/Lecture.svg" alt="Lecture" width={423} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+<Card CardType="Lecture">
+  /** 구성할 내용들 */
+</Card>
+```
+<br />
+<br />
+### Vertical
+> Photo와 Content를 결합하여 세로로 배치할 수 있는 카드입니다.
+<br />
+
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/Vertical.png" alt="Vertical" width={150} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+<Card CardType="Vertical">
+  /** 구성할 내용들 */
+</Card>
+```
+<br />
+<br />
+### Photo
+> 사진을 삽입할 수 있는 카드입니다.
+<br />
+
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+<Image src="/Photo.svg" alt="Photo" width={150} height={50}  />
+</div>
+```tsx /variant/ /text/ copy
+<Photo 
+  src="사진 주소" 
+  width={245} 
+  height={145} 
+  alt="강의"
+/>
+```
+<br />
+<br />
