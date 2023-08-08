@@ -1,9 +1,23 @@
 # Installation
 
 
+### 설치 방법
+
 프로젝트에서 이 명령을 실행해주세요.
 ```tsx copy 
 
   npm i sfac-designkit-react
 
 ```
+
+<br/><br/>
+### 환경설정
+
+```tsx copy 
+
+  import 'sfac-designkit-react/style.css'
+
+```
+1. 스타일 적용을 위해 사용하려는 컴포넌트 상단에 위 코드를 삽입하여 줍니다.<br/>
+`app/layout.tsx`에 해당 코드를 넣어주면, 하위 페이지들은 자동으로 적용됩니다. <br/><br/>
+2. `app/layout.tsx`의 body에 적용된 `inter.className`를 꼭 지워주세요!
