@@ -1,46 +1,57 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 # Icon
+
 ---
+
 Icon 컴포넌트는 name prop에 따라 해당하는 아이콘을 동적으로 불러와 렌더링하는 시스템입니다.
+
 <br />
 <br />
 ### Default
 <br />
 
-
-<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
-  <Image src="/Iconlist.png" alt="Primary" width={500} height={200}  />
+<div
+  style={{
+    border: "0.5px solid gray",
+    borderRadius: "8px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "32px",
+  }}
+>
+  <Image src="/Iconlist.png" alt="Primary" width={500} height={200} />
 </div>
 ```tsx /name/ copy
 
-  <Icon name="정의된 아이콘 이름" />
+{" "}
+<Icon name="정의된 아이콘 이름" />
 
-```
+````
 
 <br />
 - width height 조정을 원할 때
 
 ```tsx copy
 
-  <Icon 
-    name="정의된 아이콘 이름" 
+  <Icon
+    name="정의된 아이콘 이름"
     height={50} /* Size */
     width={50} /* Size */
   />
 
-```
+````
 
 <br />
 <br />
 ### Icon List
 <br />
 
-
 export const Icons = [
   { icon: 'Agree.svg' },
   { icon: 'AI.svg' },
-  { icon: 'APP.svg' },
+  { icon: 'App.svg' },
   { icon: 'AngelFace.svg' },
   { icon: 'Data.svg' },
   { icon: 'Design.svg' },
@@ -59,25 +70,45 @@ export const Icons = [
   { icon: 'CoverBox.svg' },
   { icon: 'WideScreen.svg' },
   { icon: 'Arrow.svg' },
-  
+
 ];
 
 export const IconList = () => {
   return (
     <>
-      {Icons.map(item => {
-        const iconName = item.icon.replace('.svg', ''); 
+      {Icons.map((item) => {
+        const iconName = item.icon.replace(".svg", "");
         return (
-          <li key={item.icon} style={{ display: "flex", verticalAlign: "middle", width: "30%", margin: "5px", padding: "10px 20px", border: "0.5px solid gray", borderRadius: "8px"}}>
-            <p style={{marginRight: "10px" }}>
+          <li
+            key={item.icon}
+            style={{
+              display: "flex",
+              verticalAlign: "middle",
+              width: "30%",
+              margin: "5px",
+              padding: "10px 20px",
+              border: "0.5px solid gray",
+              borderRadius: "8px",
+            }}
+          >
+            <p style={{ marginRight: "10px" }}>
               <Image
                 src={`/${item.icon}`}
                 alt={`${iconName} Icon`}
                 width={21}
                 height={21}
-              /> 
+              />
             </p>
-            <p style={{marginTop: "0px", lineHeight: "inherit", paddingLeft: "10px", fontSize: ".9rem"}}>{iconName}</p>
+            <p
+              style={{
+                marginTop: "0px",
+                lineHeight: "inherit",
+                paddingLeft: "10px",
+                fontSize: ".9rem",
+              }}
+            >
+              {iconName}
+            </p>
           </li>
         );
       })}
@@ -85,8 +116,8 @@ export const IconList = () => {
   );
 };
 
-<ul style={{ display: "flex", verticalAlign: "middle", flexFlow: "wrap"}}>
-<IconList></IconList>
+<ul style={{ display: "flex", verticalAlign: "middle", flexFlow: "wrap" }}>
+  <IconList></IconList>
 </ul>
 
 <br />
@@ -96,16 +127,15 @@ export const IconList = () => {
 Icon은 Image와 Stroke 별로 폴더 정리 했습니다. <br />
 이미지 추가 하실 때 참고 하시길 바랍니다.
 
-import { FileTree } from 'nextra/components'
- 
+import { FileTree } from "nextra/components";
+
 <FileTree>
   <FileTree.Folder name="icons" defaultOpen>
     <FileTree.Folder name="imgIcon">
       <FileTree.File name="icon.svg" />
     </FileTree.Folder>
     <FileTree.Folder name="stroke">
-       <FileTree.File name="icon.svg" />
+      <FileTree.File name="icon.svg" />
     </FileTree.Folder>
   </FileTree.Folder>
 </FileTree>
-
