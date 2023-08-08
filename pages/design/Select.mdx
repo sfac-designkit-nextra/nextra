@@ -1,0 +1,78 @@
+import Image from 'next/image';
+
+
+# Select
+`Select`는 하나의 옵션 UI 요소입니다. <br />
+`Main`, `Sub` 모드가 있으며, `active`로 활성화 된 상태로 나타낼 수 있습니다. <br />
+`Main`모드시에는 `icon`을 사용, Sub 모드시에는 `checkbox`와 아무것도 없는 두가지의 상태로 나타납니다.
+
+
+### Main
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+ <ul style={{marginRight: "20px"}}>
+    <li style={{marginBottom: "5px"}}>
+      <small>default</small>
+    </li>
+    <li>
+      <Image src="/Select/Default.png" alt="Default" width={423} height={50} style={{border: "1px solid #f6f6f6", borderRadius: "10px"}} />
+    </li>
+  </ul>
+  <ul>
+    <li style={{marginBottom: "5px"}}>
+      <small>focus</small>
+    </li>
+    <li>
+      <Image src="/Select/Focus.png" alt="Focus" width={423} height={50} style={{border: "1px solid #f6f6f6", borderRadius: "10px"}} />
+    </li>
+  </ul>
+</div>
+
+```tsx /mode/ /icon/ copy
+
+    <Select mode="Main" icon="All">커뮤니티 전체</Select>
+
+```
+
+<br />
+<br />
+### Sub
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+  <ul style={{marginRight: "20px"}}>
+    <li style={{marginBottom: "5px"}}>
+      <small>default</small>
+    </li>
+    <li>
+      <Image src="/Select/SubDefault.png" alt="Default" width={423} height={50} style={{border: "1px solid #f6f6f6", borderRadius: "10px"}} />
+    </li>
+  </ul>
+ 
+   <ul>
+    <li style={{marginBottom: "5px"}}>
+      <small>focus</small>
+    </li>
+    <li>
+      <Image src="/Select/SubFocus.png" alt="Focus" width={423} height={50} style={{border: "1px solid #f6f6f6", borderRadius: "10px"}} />
+    </li>
+  </ul>
+
+   <ul>
+    <li style={{marginBottom: "5px"}}>
+      <small>focus with checkbox</small>
+    </li>
+    <li>
+      <Image src="/Select/SubFocus-cb.png" alt="Focus" width={423} height={50} style={{border: "1px solid #f6f6f6", borderRadius: "10px"}} />
+    </li>
+  </ul>
+</div>
+
+
+
+```tsx /active/ /checkbox/ copy
+
+    <Select mode="Sub">앱 개발</Select>
+    <Select mode="Sub" active>앱 개발</Select>
+    <Select mode="Sub" active checkbox>앱 개발</Select>
+
+```

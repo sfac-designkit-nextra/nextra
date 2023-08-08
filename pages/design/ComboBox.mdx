@@ -1,0 +1,36 @@
+import Image from 'next/image';
+import ComboBox from '../../public/ComboBox.png';
+
+# CommboBox
+`CommboBox` 컴포넌트는 주로 사용자 인터페이스(UI)에서 선택할 수 있는 옵션 목록을 표시하고,<br />
+사용자가 그 중에서 하나 이상의 항목을 선택할 수 있도록 하는 UI 요소입니다. <br />
+ <br />
+
+### Default
+ComboBox는 `Select` 컴포넌트와 함께 사용되며,<br />
+Select 컴포넌트 import 하여 사용가능합니다. 또한 <br />
+ComboBox에 `text`, `icon` 값으로 변형하며 다양한 곳에서 사용가능합니다.
+<br />
+<div style={{ border: "0.5px solid gray", borderRadius: "8px", display: "flex", justifyContent: "center", alignItems: "center", padding: "32px" }}>
+  <Image src={ComboBox} alt="ComboBox" />
+</div>
+
+```tsx /text/ /icon/ copy
+
+  <ComboBox text="Select framework" icon="CoverBox"> 
+    <Select mode="Main" icon="All" className="w-[225px]">커뮤니티 전체</Select>
+    <Select mode="Main" icon="Web" className="w-[225px]">웹개발</Select>
+    <Select mode="Main" icon="App" className="w-[225px]">웹개발</Select>
+    <Select mode="Main" icon="Data" className="w-[225px]">BigData</Select>
+    <Select mode="Main" icon="Design" className="w-[225px]">UI/UX</Select>
+    <Select mode="Main" icon="Security" className="w-[225px]">해킹/보안</Select>
+    <Select mode="Main" icon="AI" className="w-[225px]"> AI </Select>
+    <Select mode="Main" icon="Game" className="w-[225px]"> 게임개발 </Select>
+  </ComboBox>
+
+```
+
+
+
+
+
