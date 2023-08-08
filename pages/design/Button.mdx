@@ -178,4 +178,60 @@ Button은 사용자가 클릭 또는 탭하여 특정 동작을 수행할 수 �
   />
 
 ```
+<br />
+<br />
+### Using example
+
+
+버튼안에 `size`와 `weight` 값을 변경 가능합니다.<br />
+5종류의 크기와 3종류의 굵기 정도를 조절 가능합니다. <br/>
+`Text`컴포넌트와 동일한 크기과 굵기입니다.
+
+```tsx {7-8} copy
+
+  <Button 
+    variant="secondary" 
+    text="로그인" 
+    asChild
+    className=""
+    textSize="size값"
+    textWeight="weight값"
+  />
+
+```
+
+<table style={{textAlign: "left"}}>
+  <thead>
+    <tr>
+      <th style={{width: "20%", padding: "5px"}}>Size</th>
+      <th style={{width: "50%", padding: "5px"}}>weight (R,M,B)</th>
+      <th style={{padding: "5px"}}>Description</th>
+    </tr>
+  </thead>
+  
+  <tbody style={{fontSize: "0.9rem"}}>
+    <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>base</td>
+      <td rowspan="5">`medium`, `semibold`, `bold`</td>
+      <td>`Body3_16` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>xs</td>
+      <td>`Body5_12` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>sm</td>
+      <td>`Body4_14` 을 나타냅니다.</td>
+    </tr>
+     <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>lg</td>
+      <td>`Body2_18` 을 나타냅니다.</td>
+    </tr>
+    <tr>
+      <td style={{color: "#0059FF", padding: "5px"}}>xl</td>
+      <td>`Body1_20` 을 나타냅니다.</td>
+    </tr>
+  </tbody>
+</table> 
+
 

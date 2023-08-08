@@ -23,19 +23,21 @@ import Image from "next/image";
 
 ```js
 // useState를 이용한 상태관리
-const [dates, setDates] = useState({
-  startDate: null, // 시작일
-  endDate: null, // 종료일
-});
-
-// 기간을 정하는 함수
-const setChangeDate = (select) => {
-  const [start, end] = select;
-  setDates({
-    startDate: start,
-    endDate: end,
+const [dates, setDates] = useState<{
+    startDate: Date | null;
+    endDate: Date | null;
+  }>({
+    startDate: null,
+    endDate: null,
   });
-};
+
+  const setChangeDate = (select: [Date | null, Date | null]) => {
+    const [start, end] = select;
+    setDates({
+      startDate: start,
+      endDate: end,
+    });
+  };
 
 <DateSelector
   selected={dates.startDate} // 선택일
