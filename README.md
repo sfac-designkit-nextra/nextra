@@ -1,23 +1,33 @@
-# Nextra Docs Template 
+# Sniper Factory Designkit React
 
-This is a template for creating documentation with [Nextra](https://nextra.site).
+![Sniper Factory Designkit React](image.png)
 
-[**Live Demo →**](https://nextra-docs-template.vercel.app)
+디자인 시스템은 디자인에서 개발(코드) 협업이 아우러지는 스타일 가이드(Style Guide)를 말합니다. 디자이너만 공유하는 스타일 가이드가 아닙니다. 기획자, 디자이너, 개발자, 관리자를 포함한 모든 팀원이 공유하는 가이드를 말합니다. 결과적으로 디자인 시스템은 디자인과 코드를 제공하는 문서로, 역동적이고 재사용 가능하며 실시간으로 유지보수 할 수 있어야 합니다.
 
-[![](.github/screenshot.png)](https://nextra-docs-template.vercel.app)
+스나이퍼팩토리 학습관리시스템 개발 시 필요한 컴포넌트들을 디자인시스템에 맞게 구현한 디자인킷입니다. 이제 더이상 CSS 작업에 시간 쏟지말고, 편리하게 구현되어있는 컴포넌트를 가져다쓰고, 필요한 로직 구현에만 집중하세요.
 
-## Quick Start
+### 설치 방법
 
-Click the button to clone this repository and deploy it on Vercel:
+```bash
+npm i sfac-designkit-react
+```
 
-[![](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Fshuding%2Fnextra-docs-template&showOptionalTeamCreation=false)
+### 실행 및 사용
 
-## Local Development
+```bash
+import “sfac-designkit-react/style.css”
+```
 
-First, run `pnpm i` to install the dependencies.
+스타일 적용을 위해 사용하려는 컴포넌트 상단에 위 코드를 삽입하여 줍니다.
 
-Then, run `pnpm dev` to start the development server and visit localhost:3000.
+`app/layout.tsx`에 해당 코드를 넣어주면, 하위 페이지들은 자동으로 적용됩니다.
 
-## License
+### 스택
 
-This project is licensed under the MIT License.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white"> <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=for-the-badge&logo=Tailwind CSS&logoColor=white">
+
+### 컴포넌트별 상세 사용 방법
+
+https://sfac-designkit.vercel.app/
+
+디자인시스템 문서를 통해 컴포넌트별 상세 사용 방법을 작성해두었습니다.
