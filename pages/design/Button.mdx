@@ -8,6 +8,24 @@ Button은 사용자가 클릭 또는 탭하여 특정 동작을 수행할 수 �
 두가지의 `disabled`, `asChild` 속성이 있습니다.
 <br />
 <br />
+
+> ❗️ Button 컴포넌트 스타일이 적용되지 않는 경우 
+
+`tailwind.config.js` 파일에서 `preflight` 속성을 `false`로 변경해주세요.
+
+```js filename="tailwind.config.js" /variant/ /text/ copy
+
+module.exports = {
+corePlugins: {
+    preflight: false,
+  },
+  ...
+}
+
+```
+
+<br />
+<br />
 ### Primary
 <br />
 
