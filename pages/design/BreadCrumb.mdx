@@ -18,3 +18,22 @@ Breadcrumb(빵 부스러기)는 사이트나 앱에서 유저의 위치를 보�
   />
 
 ```
+
+<br /><br />
+
+### Using example
+
+`textSize`와 `textWeight` 값을 통해 BreadCrumb의 글자의 크기와 굵기를 조절할 수 있습니다.<br />
+Text 컴포넌트와 동일한 속성으로 참고 해주세요. 
+그 외 스타일링이 필요한 부분은 tailwind css 문법에 맞게 `className`의 속성 값으로 적용하면 됩니다.
+
+```tsx /textSize/ /textWeight/ copy
+
+  <Breadcrumb
+    menu={["교육과정", "교육과정"]}
+    textSize=""
+    textWeight=""
+    className=""
+  />
+
+```
